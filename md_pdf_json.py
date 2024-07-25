@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF
+import pymupdf
 import spacy
 import re
 import json
@@ -8,7 +8,7 @@ import os
 nlp = spacy.load("en_core_web_md")
 
 def extract_text_from_pdf(pdf_path):
-    doc = fitz.open(pdf_path)
+    doc = pymupdf.open(pdf_path)
     text = ""
     for page in doc:
         text += page.get_text()
@@ -37,11 +37,12 @@ def parse_resume(text):
     if email:
         parsed_data["email"] = email[0]
     
-    # phone number // not complete
-    phone = re.findall(r'\b\d{10}\b', text)
-    if phone:
-        parsed_data["phone"] = phone[0]
-    
+    # phone number 
+    phone_pattern = r'(?:(?:0092|\+92)?[-.\s]?|\d{1})(\d{3})[-.\s]?(\d{3})[-.\s]?(\d{4})'
+    phone_match = re.search(phone_pattern, text)
+    if phone_match:
+        parsed_data["phone"] = phone_match.group(0).strip()
+
     # TODO: extract education, experience, and skills
 
     return parsed_data
