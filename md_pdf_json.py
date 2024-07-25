@@ -43,7 +43,16 @@ def parse_resume(text):
     if phone_match:
         parsed_data["phone"] = phone_match.group(0).strip()
 
-    # TODO: extract education, experience, and skills
+    # incomplete: extract education, experience, and skills
+    for ent in doc.ents:
+       if ent.label_ == "ORG":
+            if "university" in ent.text.lower() or "college" in ent.text.lower() or "school" in ent.text.lower():
+                qualification = {"institute": ent.text, "qualification": "", "period": ""}
+                parsed_data["education"].append(qualification)
+            else:
+                if "inc" in ent.text.lower() or "llc" in ent.text.lower() or "corporation" in ent.text.lower() or "company" in ent.text.lower() or "corp" in ent.text.lower() or "ltd" in ent.text.lower() or "limited" in ent.text.lower() or "hospital" in ent.text.lower(): 
+                    job = {"company": ent.text, "position": "", "period": ""}
+                    parsed_data["experience"].append(job)
 
     return parsed_data
 

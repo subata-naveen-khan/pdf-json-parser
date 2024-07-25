@@ -2,7 +2,18 @@
     "name": "Jon Snow",
     "email": "ashaywalke@iitkgp.ac.in",
     "phone": "9933995693",
-    "education": [],
+    "education": [
+        {
+            "institute": "Dharampeth Science College\nNagpur",
+            "qualification": "",
+            "period": ""
+        },
+        {
+            "institute": "University of Science",
+            "qualification": "",
+            "period": ""
+        }
+    ],
     "experience": [],
     "skills": []
 }

@@ -1,0 +1,29 @@
+{
+    "name": "Layla Martin",
+    "email": "layla.d.martin@gmail.com",
+    "phone": "",
+    "education": [
+        {
+            "institute": "University of San Francisco",
+            "qualification": "",
+            "period": ""
+        },
+        {
+            "institute": "University of San Francisco\nDean\u2019s Honor Role",
+            "qualification": "",
+            "period": ""
+        },
+        {
+            "institute": "University Scholar",
+            "qualification": "",
+            "period": ""
+        },
+        {
+            "institute": "University Scholarship",
+            "qualification": "",
+            "period": ""
+        }
+    ],
+    "experience": [],
+    "skills": []
+}

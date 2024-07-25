@@ -4,3 +4,5 @@ txt_resume/
 sm_pdf_json.py
 parsed_data/OWAIS_AHMED_KHAN_Resume_md.json
 resumes/OWAIS_AHMED_KHAN_Resume.pdf
+NER_test.py
+NER_test2.py
