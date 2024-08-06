@@ -1,8 +1,11 @@
 pdfjsonenv/
-phone_test.py
-txt_resume/
-sm_pdf_json.py
-parsed_data/OWAIS_AHMED_KHAN_Resume_md.json
+extracted_txt/
+parsed_data/
+.obsidian
+
+resumes/Basit Vadsarya CV.pdf
 resumes/OWAIS_AHMED_KHAN_Resume.pdf
-NER_test.py
-NER_test2.py
+resumes/ShoaibKhan_CV[1].pdf
+resumes/ShoaibKhan_CV[3].docx
+resumes/SubataNaveenKhan_Resume.docx
+resumes/Subata_Naveen_Khan-resume.pdf

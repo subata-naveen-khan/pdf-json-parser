@@ -1,0 +1,7 @@
+os
+pymupdf
+docx
+spacy
+re
+argparse
+json
