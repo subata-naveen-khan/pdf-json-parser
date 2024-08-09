@@ -13,7 +13,7 @@ def extract_text(file):
 
 def save_to_txt(text, docx_path):
     txt_path = docx_path.replace('.docx', '_d2t.txt')
-    txt_path = txt_path.replace('resumes', 'extracted_txt')
+    txt_path = txt_path.replace('a_res', 'extracted_txt')
     
     with open(txt_path, 'w', encoding='utf-8') as file:
         file.write(text)

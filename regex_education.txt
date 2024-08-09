@@ -1,0 +1,17 @@
+(?i)
+(?:
+    \bB.?\s?Tech:?\b|
+    \bB\.?(?:[AS]\.?|Eng|Sc)\b|
+    \bM(?:\.[AS]\.|\.Eng|Sc)\b|
+    \b(?:Master|Bachelor)(?:'?s)?\b|
+    \bDoctor(?:ate|al)?\b|
+    \b(?:Under|Post)?[-\s]Graduate\b
+    \bPh\.?D\.?\b|
+    \bD\.?Sc\.?\b|
+    \b[AO][-\s]?levels?\b|
+    \bInter(?:mediate)?\b|
+    \bMatric(?:ulation)?\b
+)
+#(?::|of|in)\ [^\n\t]+\b 
+(?::|of|in)?[^\n\t]+\b
+#(?::|of|in)[^\n\t]+\b
