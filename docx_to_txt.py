@@ -1,9 +1,9 @@
 import os
-from docx import Document
+import docx
 import preprocess_text as pre
 
 def open_file(docx_path):
-    return Document(docx_path)
+    return docx.Document(docx_path)
     
 def extract_text(file):
     text = []

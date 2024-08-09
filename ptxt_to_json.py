@@ -41,4 +41,3 @@ if __name__ == "__main__":
     else:
         print("txt path is invalid")
         exit()
-    

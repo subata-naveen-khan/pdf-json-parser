@@ -6,9 +6,9 @@ def handle_caps(text):
     normalized_lines = []
 
     for line in lines:
-        if line.isupper():
+        if line.isupper(): # if all uppercase
             words = line.split()
-            capitalized_words = [word.capitalize() for word in words]
+            capitalized_words = [word.capitalize() for word in words] # capitalize first letter of each word
             normalized_lines.append(' '.join(capitalized_words))
         else:
             normalized_lines.append(line)
@@ -18,7 +18,6 @@ def handle_caps(text):
 
 # remove unnecessary newlines 
 def merge_lines(text):
-    # version 4
     lines = text.split('\n')
     reformatted_text = []
     buffer = ""

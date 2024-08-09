@@ -1,9 +1,9 @@
 import os
-import pymupdf as pymu
+import fitz
 import preprocess_text as pre
 
 def open_file(pdf_path):
-    return pymu.open(pdf_path)
+    return fitz.open(pdf_path)
     
 def extract_text(file):
     text = ""
