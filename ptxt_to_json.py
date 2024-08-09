@@ -13,7 +13,7 @@ def convert(text, file_path):
 
     json_path = file_path.replace('.pdf', '.json')
     json_path = json_path.replace('.docx', '.json')
-    json_path = json_path.replace('resumes', 'parsed_data')
+    json_path = json_path.replace('a_res', 'parsed_data')
 
     with open(json_path, 'w') as json_file:
         json.dump(parsed_data, json_file, indent=4)

@@ -33,23 +33,21 @@ def get_skills(text):
     
     return skills
 
-def get_education(text):
-    education = []
-    with open("regex_education.txt", 'r') as file:
-        pattern = file.read()
-    pattern = re.compile(pattern, re.VERBOSE)
+# def get_education(text):
+#     education = []
+#     with open("regex_education.txt", 'r') as file:
+#         pattern = file.read()
+#     pattern = re.compile(pattern, re.VERBOSE)
 
-    # for line in text.splitlines():
-    #     if pattern.search(line):
-    #         education.append(line.strip())
+#     # for line in text.splitlines():
+#     #     if pattern.search(line):
+#     #         education.append(line.strip())
     
-    matches = re.findall(pattern, text)
-    for match in matches:
-        education.append(match.strip())
+#     matches = re.findall(pattern, text)
+#     for match in matches:
+#         education.append(match.strip())
   
-
-        
-    return education
+#     return education
 
 def parse_resume(text):
     nlp = spacy.load("en_core_web_md")
@@ -61,6 +59,6 @@ def parse_resume(text):
     parsed_data["name"] = get_name(doc)
     parsed_data["phone"] = get_phone_number(text)
     parsed_data["skills"] = get_skills(text)
-    parsed_data["education"] = get_education(text)
+    # parsed_data["education"] = get_education(text)
 
     return parsed_data
