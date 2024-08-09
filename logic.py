@@ -20,25 +20,39 @@ def get_phone_number(text):
 
     return phone
 
+def get_skills(text):
+    with open('skills_list.txt', 'r') as file:
+    # Read all lines and strip the newline character
+        skills_list = [line.strip() for line in file.readlines()]
+
+    skills = []
+
+    for skill in skills_list:
+        if skill.lower() in text.lower():
+            skills.append(skill)
+    
+    return skills
+
 def get_education(text):
     education = []
+    with open("regex_education.txt", 'r') as file:
+        pattern = file.read()
+    pattern = re.compile(pattern, re.VERBOSE)
 
-    # pattern = r"(?i)(?:\bBs|\bB\.\w+|\bM\.\w+|\bPh\.D\.\w+|\bBachelor(?:'s)?|\bMaster(?:'s)?|\bPh\.?D|\bMatric(?:\s|ulation)|\bIntermediate|\bO-Level(?:s)?|\bA-Level(?:s)?)\s*(?::\s*)?(?:\w+\s)*\w+"
-    pattern = re.compile(r"\b(?:Bachelor(?:'s)?|B.Tech|B\.?A\.?|B\.?S\.?|B\.?Eng|Master(?:'?s)?|M\.?A\.?|M\.?S\.?|M\.?Eng|Doctor(?:ate|al)?|Ph\.?D\.?|D\.?Sc\.?|Graduate|Postgraduate|Undergraduate)\b")
+    # for line in text.splitlines():
+    #     if pattern.search(line):
+    #         education.append(line.strip())
+    
+    matches = re.findall(pattern, text)
+    for match in matches:
+        education.append(match.strip())
+  
 
-    for line in text.splitlines():
-        if pattern.search(line):
-            education.append(line.strip())
-
-    # matches = re.findall(pattern, text)
-    # for match in matches:
-    #     education.append(match.strip())
         
     return education
 
 def parse_resume(text):
     nlp = spacy.load("en_core_web_md")
-
     doc = nlp(text)
 
     parsed_data = { "name": "", "email": "", "phone": "", "education": [], "experience": [], "skills": [] }
@@ -46,7 +60,7 @@ def parse_resume(text):
     parsed_data["email"] = get_email(text)
     parsed_data["name"] = get_name(doc)
     parsed_data["phone"] = get_phone_number(text)
-    # parse_resume["skills"] = get_skills(text)
+    parsed_data["skills"] = get_skills(text)
     parsed_data["education"] = get_education(text)
 
     return parsed_data

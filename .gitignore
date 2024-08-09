@@ -1,14 +1,16 @@
+__pychache__/
 pdfjsonenv/
-extracted_txt/
-parsed_data/
+extracted_txt/*
+parsed_data/*
 a_res/
 .obsidian
 
-app2.py
+regex_education.txt
 
-resumes/Basit Vadsarya CV.pdf
-resumes/OWAIS_AHMED_KHAN_Resume.pdf
-resumes/ShoaibKhan_CV[1].pdf
-resumes/ShoaibKhan_CV[3].docx
-resumes/SubataNaveenKhan_Resume.docx
-resumes/Subata_Naveen_Khan-resume.pdf
+resumes/Basit.pdf
+resumes/Owais.pdf
+resumes/Shoaib.docx
+resumes/Shoaib.pdf 
+resumes/Subata.docx
+resumes/Subata.pdf 
+resumes/rename.bat

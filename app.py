@@ -1,4 +1,4 @@
-
+# Run this if you want to process a single file. Enter the file path as an argument in the command line
 import os
 import pdf_to_txt
 import docx_to_txt
