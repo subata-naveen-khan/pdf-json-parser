@@ -1,6 +1,7 @@
 pdfjsonenv/
 extracted_txt/
 parsed_data/
+a_res/
 .obsidian
 
 app2.py
