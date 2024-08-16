@@ -12,6 +12,7 @@
     \bInter(?:mediate)?\b|
     \bMatric(?:ulation)?\b
 )
+
 #(?::|of|in)\ [^\n\t]+\b 
 (?::|of|in)?[^\n\t]+\b
 #(?::|of|in)[^\n\t]+\b

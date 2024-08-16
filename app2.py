@@ -3,7 +3,7 @@ import os
 import glob
 import pdf_to_txt
 import docx_to_txt
-import ptxt_to_json
+import txt_to_json
 
 def process_resume(file_path):
     if file_path.endswith('.pdf'):
@@ -13,7 +13,7 @@ def process_resume(file_path):
         txt = docx_to_txt.convert(file_path)
     
     # txt_to_json.convert(txt, file_path)
-    ptxt_to_json.convert(txt)
+    txt_to_json.convert(txt)
 
 if __name__ == "__main__":
     folder_path = 'a_res/'
