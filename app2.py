@@ -16,7 +16,7 @@ def process_resume(file_path):
     txt_to_json.convert(txt)
 
 if __name__ == "__main__":
-    folder_path = 'a_res/'
+    folder_path = 'resumes/'
 
     for file_name in glob.glob(os.path.join(folder_path, '*')):
         if os.path.isfile(file_name) and (file_name.endswith('.pdf') or file_name.endswith('.docx')):

@@ -1,16 +1,5 @@
-__pychache__/
+__pycache__/
 pdfjsonenv/
 extracted_txt/*
 parsed_data/*
-a_res/
 .obsidian
-
-regex_education.txt
-
-resumes/Basit.pdf
-resumes/Owais.pdf
-resumes/Shoaib.docx
-resumes/Shoaib.pdf 
-resumes/Subata.docx
-resumes/Subata.pdf 
-resumes/rename.bat
